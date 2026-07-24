@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Touchpad } from "lucide-react";
 import { LuArrowRight, LuMapPin, LuStar } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 

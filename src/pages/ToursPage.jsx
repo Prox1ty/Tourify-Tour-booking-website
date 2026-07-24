@@ -17,6 +17,7 @@ function ToursPage() {
 
     return (
         <>
+        <span ref={topRef}></span>
             <div className="w-full">
                 <h1
                     className="
@@ -30,7 +31,6 @@ function ToursPage() {
                 >
                     Your Next Adventure
                 </h1>
-                <span ref={topRef}></span>
                 <div className="mx-auto mt-10 w-full max-w-7xl px-6">
                     <div className="mx-auto max-w-xl">
                         <Searchbar />

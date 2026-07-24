@@ -5,12 +5,13 @@ import { Searchbar } from "../shared";
 import { Filter } from "../components/searchFilters";
 
 function ToursPage() {
-    const topRef = useRef('top');
+    const topRef = useRef(null);
     const { visibleTours } = useTour();
 
     useEffect(() => {
         topRef.current?.scrollIntoView({
-            behavior: 'smooth' 
+            behavior: 'smooth',
+            block: "start"
         });
     }, []);
 
@@ -29,7 +30,7 @@ function ToursPage() {
                 >
                     Your Next Adventure
                 </h1>
-                <span ref="top"></span>
+                <span ref={topRef}></span>
                 <div className="mx-auto mt-10 w-full max-w-7xl px-6">
                     <div className="mx-auto max-w-xl">
                         <Searchbar />

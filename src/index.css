@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+/* Enables Tailwind's dark variant using the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Backgrounds */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-secondary: #f1f5f9;
+
+  /* Text */
+  --text: #0f172a;
+  --text-muted: #64748b;
+
+  /* Borders */
+  --border: #e2e8f0;
+
+  /* Primary */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  /* Accent */
+  --accent: #7c3aed;
+
+  /* Status */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+
+  /* Shadows */
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  /* Backgrounds */
+  --bg: #0b1120;
+  --surface: #111827;
+  --surface-secondary: #1f2937;
+
+  /* Text */
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+
+  /* Borders */
+  --border: #334155;
+
+  /* Primary */
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+
+  /* Accent */
+  --accent: #8b5cf6;
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #fbbf24;
+  --danger: #ef4444;
+
+  /* Shadows */
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Base styles */
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 250ms ease,
+    color 250ms ease;
+}
+
+/* Reusable utility classes */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.card-secondary {
+  background: var(--surface-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.border-default {
+  border-color: var(--border);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+* {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
